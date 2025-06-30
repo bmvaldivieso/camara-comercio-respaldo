@@ -428,3 +428,24 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.category-card.with-image .btn-ingresar {
+    display: none;
+  }
+  
+  .category-card.with-image:hover {
+    background: linear-gradient(180deg, #ffc107 0%, #ffa000 100%);
+    color: white;
+  }
+  
+  .category-card.with-image:hover .btn-ingresar {
+    display: inline-block;
+    background-color: #343a40;
+    color: white;
+    font-weight: 600;
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    border: none;
+  }
+  
