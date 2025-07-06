@@ -1,0 +1,136 @@
+/* Estilos generales para las páginas de usuarios */
+.users-section {
+    padding: 1.5rem 0;
+}
+
+.users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacio entre cada tarjeta de usuario */
+    max-height: 75vh; /* O una altura fija, por ejemplo: 500px; */
+    overflow-y: auto; /* Esto añadirá el scroll vertical si el contenido excede el max-height */
+    padding-right: 10px; /* Para que el scrollbar no se superponga al contenido */
+    scrollbar-width: thin;
+    scrollbar-color: #D9D9D9 #f0f2f5;
+}
+
+.users-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.users-list::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.users-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.user-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espacio entre el usuario y el botón */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+}
+
+.user-card .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-grow: 1; /* Permite que la información del usuario ocupe espacio */
+}
+
+.user-card .user-avatar {
+    width: 100px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f2f5; /* Borde sutil alrededor del avatar */
+}
+
+.user-card .user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.user-card .btn-view-info {
+    background: linear-gradient(90deg, #1D1959, #3D36BF);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 120px;
+    text-align: center;
+}
+
+.user-card .btn-view-info:hover {
+    background: linear-gradient(90deg, #3D36BF, #1D1959);
+}
+
+/* Estilos para la barra inferior flotante */
+.bottom-floating-bar {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black; /* Fondo negro/gris oscuro */
+    border-radius: 3rem;
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 1.5rem;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.bottom-floating-bar .bar-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%; /* Botones circulares */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.bottom-floating-bar .bar-button.active {
+    background-color: #495057; /* Un gris más claro cuando activo */
+}
+
+.bottom-floating-bar .bar-button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .user-card {
+        flex-direction: column;
+        align-items: flex-start; /* Alinear elementos al inicio */
+        gap: 1rem;
+    }
+    .user-card .user-info {
+        width: 100%; /* La información del usuario ocupa todo el ancho */
+        margin-bottom: 0.5rem;
+    }
+    .user-card .btn-view-info {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+    .bottom-floating-bar {
+        width: 90%; /* La barra ocupa más ancho en móviles */
+        padding: 0.75rem 1rem;
+        gap: 1rem;
+    }
+}

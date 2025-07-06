@@ -14,4 +14,17 @@ def categorias(request):
 def servicios(request):
     return render(request, 'servicios.html')
 def subservicios(request):
-    return render(request, 'subservicios.html')    
+    return render(request, 'subservicios.html')
+def masteradmin(request):
+    return render(request, 'masteradmin.html')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+def admin_usuarios(request):
+    return render(request, 'usuarios.html')
+def admin_usuarios_incremento(request):
+    return render(request, 'usuarios_incremento.html')    
+def admin_socios(request):
+    return render(request, 'socios.html')
+def admin_socios_formularios(request):
+    return render(request, 'socios_formularios.html')    
+      
