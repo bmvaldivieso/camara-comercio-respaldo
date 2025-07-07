@@ -26,5 +26,21 @@ def admin_usuarios_incremento(request):
 def admin_socios(request):
     return render(request, 'socios.html')
 def admin_socios_formularios(request):
-    return render(request, 'socios_formularios.html')    
+    return render(request, 'socios_formularios.html')
+def seguro_vida(request):
+    return render(request, 'seguro_vida.html')
+def seguro_vida_archivos_subidos(request):
+    return render(request, 'seguro_vida_archivos_subidos.html')
+def seguro_vida_archivos_recibidos(request):
+    return render(request, 'seguro_vida_archivos_recibidos.html')
+def seguro_vida_estado(request):
+    return render(request, 'seguro_vida_estado.html')
+def formularios(request):
+    return render(request, 'formularios_main.html')
+def formularios_form_a(request):
+    return render(request, 'formularios_form_a.html')
+def formularios_form_b(request):
+    return render(request, 'formularios_form_b.html')     
+def solicitud_seguro_form(request):
+    return render(request, 'solicitud_seguro_form.html')   
       

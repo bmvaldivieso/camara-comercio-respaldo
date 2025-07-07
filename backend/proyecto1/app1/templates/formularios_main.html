@@ -1,0 +1,35 @@
+{% extends 'master.html' %}
+{% load static %}
+
+{% block title %}Formularios - Cámara de Comercio de Loja{% endblock %}
+{% block page_title %}Formularios{% endblock %} {# Título de la sección superior #}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/formularios_main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/formularios_content.css' %}"> {# Estilos para el contenido de los formularios A y B #}
+{% endblock %}
+
+{% block page_content %}
+
+  {# No hay banner visible en las imágenes proporcionadas para formularios, así que lo omitimos. #}
+  {# Si lo necesitas, puedes añadir un div aquí como en subservicios.html y seguro_vida.html #}
+
+  <div class="form-main-container">
+    <h3 class="section-heading">Formularios</h3>
+    <hr>
+    <div class="form-tab-bar">
+      <button class="form-tab-button active" data-tab-target="formulario-a">Formulario A</button>
+      <button class="form-tab-button" data-tab-target="formulario-b">Formulario B</button>
+    </div>
+
+    <div id="form-tab-content-container" class="form-content-wrapper">
+      {# Por defecto, incluimos el primer tab para que cargue con la página. #}
+      {# Luego, el JS se encargará de las cargas AJAX para los cambios. #}
+      {% include 'formularios_form_a.html' %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'js/formularios_tabs.js' %}" defer></script>
+{% endblock %}

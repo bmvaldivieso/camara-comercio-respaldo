@@ -21,4 +21,12 @@ urlpatterns = [
         path('admin_usuarios_incremento', views.admin_usuarios_incremento, name='admin_usuarios_incremento'),
         path('admin_socios', views.admin_socios, name='admin_socios'),
         path('admin_socios_formularios', views.admin_socios_formularios, name='admin_socios_formularios'),
+        path('seguro_vida', views.seguro_vida, name='seguro_vida'),
+        path('seguro_vida_archivos_subidos', views.seguro_vida_archivos_subidos, name='seguro_vida_archivos_subidos'),
+        path('seguro_vida_archivos_recibidos', views.seguro_vida_archivos_recibidos, name='seguro_vida_archivos_recibidos'),
+        path('seguro_vida_estado', views.seguro_vida_estado, name='seguro_vida_estado'),    
+        path('formularios', views.formularios, name='formularios'),
+        path('formularios_form_a', views.formularios_form_a, name='formularios_form_a'),
+        path('formularios_form_b', views.formularios_form_b, name='formularios_form_b'),
+        path('solicitud_seguro_form', views.solicitud_seguro_form, name='solicitud_seguro_form'),
  ]
