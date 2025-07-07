@@ -1,4 +1,3 @@
-/* Estilos para la sección de formularios de Socios (socios_formularios.html) */
 .socio-forms-section {
     background-color: white;
     padding: 1.5rem;
@@ -6,15 +5,14 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Ajuste del selector para el título de Formularios (ahora es h4 en tu HTML) */
-h4 { /* Puedes ser más específico si este h4 se usa en otros lugares, ej. .main-content-admin h4 */
+h4 {
     font-size: 1.5rem;
     font-weight: 600;
     color: #343a40;
     margin-bottom: 1.5rem;
 }
 
-h4 .far { /* Estilo del icono dentro del h4 */
+h4 .far {
     color: black;
     padding: 0.35rem;
     width: 1.8rem;
@@ -26,20 +24,15 @@ h4 .far { /* Estilo del icono dentro del h4 */
 }
 
 
-/* Contenedor para la tabla con scroll horizontal */
 .table-responsive-socio {
     overflow-x: auto;
-    /* Permite el scroll horizontal si la tabla es demasiado ancha */
     -webkit-overflow-scrolling: touch;
-    /* Mejora el scroll en dispositivos táctiles */
 }
 
 .table-responsive-socio table {
     width: 100%;
-    /* Ocupa el 100% del contenedor */
     border-collapse: collapse;
     min-width: 800px;
-    /* Ancho mínimo para forzar el scroll horizontal si es necesario */
 }
 
 .table-responsive-socio th,
@@ -50,7 +43,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
     white-space: nowrap;
     text-align: center;
     vertical-align: middle;
-    /* Evita que el contenido de la celda se rompa */
 }
 
 .table-responsive-socio th {
@@ -83,11 +75,10 @@ h4 .far { /* Estilo del icono dentro del h4 */
 
 .pdf-icon {
     color: #dc3545;
-    /* Rojo para icono PDF */
     margin-left: 0.5rem;
 }
 
-.table-responsive-socio td .far { /* CAMBIO: Ahora apunta a .far */
+.table-responsive-socio td .far {
     font-size: 1.1rem;
     cursor: pointer;
     margin: 0 0.5rem;
@@ -96,7 +87,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
 
 .table-responsive-socio td .fa-cloud-download-alt {
     color: black;
-    /* Azul para descargar */
 }
 
 .table-responsive-socio td .fa-cloud-download-alt:hover {
@@ -105,7 +95,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
 
 .table-responsive-socio td .fa-trash-alt {
     color: black;
-    /* Rojo para eliminar */
 }
 
 .table-responsive-socio td .fa-trash-alt:hover {
@@ -117,7 +106,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
     border-radius: 3rem;
     padding: 0.375rem 0.75rem;
     width: 150px;
-    /* Ancho fijo para el campo de comentario */
     font-size: 0.9rem;
     color: #495057;
 }
@@ -127,7 +115,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
     box-shadow: 0 0 0 0.15rem rgba(61, 54, 191, 0.25);
 }
 
-/* Estilos para el switch (mantengo aquí, pero idealmente en un archivo común si se usa en muchos lugares) */
 .switch {
     position: relative;
     display: inline-block;
@@ -168,7 +155,6 @@ h4 .far { /* Estilo del icono dentro del h4 */
 
 input:checked+.slider {
     background-color: #7B68EE;
-    /* Color del switch cuando está activo */
 }
 
 input:focus+.slider {

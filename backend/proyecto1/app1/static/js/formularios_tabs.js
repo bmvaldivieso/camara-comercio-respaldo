@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const tabButtons = document.querySelectorAll('.form-tab-bar .form-tab-button');
     const tabContentContainer = document.getElementById('form-tab-content-container');
 
-    // Función para cargar el contenido de la pestaña (vía AJAX)
+
     function loadFormTabContent(tabName) {
-        // Asocia cada pestaña con una URL existente en urlpatterns
         const urlMap = {
             'formulario-a': '/formularios_form_a',
             'formulario-b': '/formularios_form_b',
@@ -36,9 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     tabButtons.forEach(button => {
         button.addEventListener('click', function () {
-            // Remover 'active' de todos los botones de pestaña
             tabButtons.forEach(btn => btn.classList.remove('active'));
-            // Añadir 'active' al botón clicado
             this.classList.add('active');
 
             const tabName = this.dataset.tabTarget;
@@ -46,31 +43,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Lógica para asegurar que el ítem "Formulario" en el sidebar esté activo
     const currentPath = window.location.pathname;
     const navItems = document.querySelectorAll('.sidebar .nav-links .nav-item');
-    const navFormulario = document.getElementById('nav-formulario'); // ID del item "Formulario"
-
-    // Si la URL actual está en la sección de formularios
+    const navFormulario = document.getElementById('nav-formulario');
     if (currentPath.includes('/formularios')) {
-        navItems.forEach(item => item.classList.remove('active')); // Desactivar todos los ítems
+        navItems.forEach(item => item.classList.remove('active'));
         if (navFormulario) {
-            navFormulario.classList.add('active'); // Activar el ítem "Formulario"
-            // Actualizar el título y el ícono de la top-bar
+            navFormulario.classList.add('active');
             const sectionTitle = document.getElementById('section-title');
             if (sectionTitle) {
                 sectionTitle.textContent = navFormulario.querySelector('span').textContent;
-                // Ajustar el ícono de la top-bar
                 const iconElement = sectionTitle.previousElementSibling;
                 if (iconElement) {
-                    iconElement.className = ''; // Limpiar clases existentes
-                    iconElement.classList.add('far', 'fa-file-alt', 'me-2', 'icono-azul'); // Usar far fa-file-alt
+                    iconElement.className = '';
+                    iconElement.classList.add('far', 'fa-file-alt', 'me-2', 'icono-azul');
                 }
             }
         }
     }
 
-    // Cargar el contenido de la primera pestaña al iniciar la página
     const initialTabTarget = document.querySelector('.form-tab-bar .form-tab-button.active')?.dataset.tabTarget;
     if (initialTabTarget) {
         loadFormTabContent(initialTabTarget);

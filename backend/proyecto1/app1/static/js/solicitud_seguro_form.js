@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const formSteps = document.querySelectorAll('.form-steps-nav .step');
     const formSections = document.querySelectorAll('.solicitud-form-container .form-section');
     const btnSiguiente = document.querySelectorAll('.btn-siguiente');
@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentStep = 1;
 
-    // Función para mostrar la sección actual y actualizar los pasos
     function showSection(stepNumber) {
         formSections.forEach(section => section.classList.remove('active'));
         document.getElementById(`section-${stepNumber}`).classList.add('active');
@@ -57,9 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Navegación con botones "Siguiente"
     btnSiguiente.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const nextStep = parseInt(this.dataset.nextStep);
             if (nextStep) {
                 showSection(nextStep);
@@ -67,9 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navegación con botones "Volver"
     btnVolver.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             const prevStep = parseInt(this.dataset.prevStep);
             if (prevStep) {
                 showSection(prevStep);
@@ -77,15 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navegación al hacer clic en los números de paso
     formSteps.forEach(stepButton => {
-        stepButton.addEventListener('click', function() {
+        stepButton.addEventListener('click', function () {
             const stepNumber = parseInt(this.dataset.step);
             showSection(stepNumber);
         });
     });
 
-    // Lógica para habilitar/deshabilitar el campo "especifique compañias" (Sección I)
     function toggleEspecifiqueCompanas() {
         if (otrosSegurosSi && otrosSegurosSi.checked) {
             especifiqueCompanas.disabled = false;
@@ -100,7 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleEspecifiqueCompanas();
     }
 
-    // Lógica para habilitar/deshabilitar campos de peso (Sección II)
     function togglePesoCambioFields() {
         if (pesoCambioSi && pesoCambioSi.checked) {
             cuantoPesoCambio.disabled = false;
@@ -111,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cuantoPesoCambio.value = '';
             pesoIntencionalSi.disabled = true;
             pesoIntencionalNo.disabled = true;
-            pesoIntencionalNo.checked = true; // Deshabilita y selecciona 'No'
+            pesoIntencionalNo.checked = true;
             causaPesoCambio.disabled = true;
             causaPesoCambio.value = '';
         }
@@ -127,15 +121,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (pesoCambioSi && pesoCambioNo && cuantoPesoCambio) {
         pesoCambioSi.addEventListener('change', togglePesoCambioFields);
         pesoCambioNo.addEventListener('change', togglePesoCambioFields);
-        togglePesoCambioFields(); // Estado inicial
+        togglePesoCambioFields();
     }
     if (pesoIntencionalSi && pesoIntencionalNo && causaPesoCambio) {
         pesoIntencionalSi.addEventListener('change', toggleCausaPesoCambio);
         pesoIntencionalNo.addEventListener('change', toggleCausaPesoCambio);
-        toggleCausaPesoCambio(); // Estado inicial
+        toggleCausaPesoCambio();
     }
 
-    // Lógica para habilitar/deshabilitar campos de alcohol (Sección II)
     function toggleAlcoholFields() {
         if (alcoholSi && alcoholSi.checked) {
             cualesAlcohol.disabled = false;
@@ -153,7 +146,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleAlcoholFields();
     }
 
-    // Lógica para habilitar/deshabilitar campos de estupefacientes (Sección II)
     function toggleEstupefacientesFields() {
         if (estupefacientesSi && estupefacientesSi.checked) {
             cualesEstupefacientes.disabled = false;
@@ -171,7 +163,6 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleEstupefacientesFields();
     }
 
-    // Lógica para habilitar/deshabilitar campo de embarazo (Sección II)
     function toggleEmbarazoFields() {
         if (embarazadaSi && embarazadaSi.checked) {
             cuantosMesesEmbarazo.disabled = false;
@@ -186,9 +177,8 @@ document.addEventListener('DOMContentLoaded', function() {
         toggleEmbarazoFields();
     }
 
-    // Lógica para añadir filas a la tabla de declaraciones (Sección II)
     if (btnAgregarFila && declaracionesTableBody) {
-        btnAgregarFila.addEventListener('click', function() {
+        btnAgregarFila.addEventListener('click', function () {
             const newRow = document.createElement('tr');
             newRow.innerHTML = `
                 <td><input type="number" class="form-control form-control-sm" name="preguntaNro[]" /></td>
@@ -201,21 +191,12 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             declaracionesTableBody.appendChild(newRow);
 
-            // Añadir event listener para el botón de eliminar fila
-            newRow.querySelector('.btn-eliminar-fila').addEventListener('click', function() {
+            newRow.querySelector('.btn-eliminar-fila').addEventListener('click', function () {
                 newRow.remove();
             });
         });
-
-        // Lógica para eliminar la fila de ejemplo si el usuario desea.
-        // Opcional: Si quieres que la fila de ejemplo sea eliminable.
-        // document.querySelector('#declaracionesTable .btn-eliminar-fila')?.addEventListener('click', function() {
-        //     this.closest('tr').remove();
-        // });
     }
 
-
-    // Lógica para asegurar que el ítem "Formulario" en el sidebar esté activo
     const currentPath = window.location.pathname;
     const navItems = document.querySelectorAll('.sidebar .nav-links .nav-item');
     const navFormulario = document.getElementById('nav-formulario');

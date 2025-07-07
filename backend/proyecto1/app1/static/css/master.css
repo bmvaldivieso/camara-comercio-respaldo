@@ -6,7 +6,6 @@ body {
     margin: 0;
 }
 
-/* Estilos para la barra lateral izquierda (20%) */
 .sidebar {
     width: 20%;
     background-color: #3D36BF;
@@ -75,7 +74,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Estilo específico para el ítem "Categorias" activo */
 .sidebar .nav-links .nav-item.active {
     background-color: white;
     color: #3D36BF !important;
@@ -87,7 +85,6 @@ body {
     color: #3D36BF;
 }
 
-/* Estilo del botón de "Login" en la barra lateral */
 .sidebar .login-button-container {
     padding: 1.5rem 2rem;
     text-align: center;
@@ -111,7 +108,6 @@ body {
     margin-right: 0.5rem;
 }
 
-/* Estilos para el contenido principal derecho (80%) */
 .main-content {
     width: 80%;
     padding: 2rem;
@@ -173,7 +169,6 @@ body {
     color: white;
 }
 
-/* Media queries para responsividad */
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -254,4 +249,3 @@ body {
 .icono-azul {
     color: #3D36BF;
 }
-

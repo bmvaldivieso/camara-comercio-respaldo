@@ -1,4 +1,3 @@
-/* Estilos comunes para las secciones de archivos (subidos y recibidos) */
 .tab-pane-content h4 {
     font-size: 1.4rem;
     font-weight: 600;
@@ -27,12 +26,12 @@
 }
 
 .file-card .pdf-icon {
-    color: #dc3545; /* Rojo para el icono de PDF */
+    color: #dc3545;
     font-size: 1.5rem;
 }
 
 .file-card .btn-download {
-    background: linear-gradient(90deg, #857FF1, #1D1959);/* Azul estándar */
+    background: linear-gradient(90deg, #857FF1, #1D1959);
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -50,7 +49,6 @@
     margin-right: 0.5rem;
 }
 
-/* Sección de subir archivos */
 .upload-section {
     display: flex;
     flex-direction: column;
@@ -63,7 +61,7 @@
 }
 
 .upload-section .btn-upload {
-    background: linear-gradient(90deg, #FFE126, #F10006); /* Color principal */
+    background: linear-gradient(90deg, #FFE126, #F10006);
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -87,20 +85,19 @@
     color: #6c757d;
 }
 
-/* Notas y botones de la sección de Archivos Recibidos */
 .receipt-note {
     font-size: 0.95rem;
     color: #6c757d;
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    border-left: 4px solid #7B68EE; /* Un toque visual */
+    border-left: 4px solid #7B68EE;
     padding-left: 0.8rem;
 }
 
 .receipt-buttons {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap; /* Para responsividad */
+    flex-wrap: wrap;
 }
 
 .receipt-buttons .btn {
@@ -115,26 +112,25 @@
 }
 
 .receipt-buttons .btn-add-cart {
-    background: linear-gradient(90deg, #857FF1, #1D1959);/* Amarillo de tus categorías */
-    color: white; /* Texto oscuro para contraste */
+    background: linear-gradient(90deg, #857FF1, #1D1959);
+    color: white;
     border: none;
 }
 
 .receipt-buttons .btn-add-cart:hover {
-    background-color: #e0a800; /* Amarillo más oscuro al hover */
+    background-color: #e0a800;
 }
 
 .terminos-condiciones {
-    color: #3D36BF; /* Azul clásico Bootstrap o el que prefieras */
+    color: #3D36BF;
     font-weight: 500;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
-  }
-  
-  .icono-check {
-    color: #1C274C; /* Verde si quieres resaltar el "check" */
+}
+
+.icono-check {
+    color: #1C274C;
     font-size: 1.1rem;
-  }
-  
+}

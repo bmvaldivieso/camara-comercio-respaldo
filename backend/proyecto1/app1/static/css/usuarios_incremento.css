@@ -1,26 +1,20 @@
 .users-list {
     max-height: 66vh;
-    /* O cualquier altura que desees para mantenerlo dentro de viewport */
     overflow-y: auto;
     padding-right: 8px;
-    /* Espacio para evitar que el scroll tape contenido */
 }
 
-/* Estilos para los filtros de la sección de incremento de compras */
 .filters-section {
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
     gap: 1rem;
-    /* Espacio entre los botones de filtro */
     flex-wrap: wrap;
-    /* Permite que los botones se envuelvan */
 }
 
 .filters-section span {
     margin-right: 1.5rem;
-    /* O la cantidad que prefieras */
 }
 
 .filter-button {
@@ -37,7 +31,6 @@
 
 .filter-button.active {
     background-color: #3D36BF;
-    /* Azul para el filtro activo */
     color: white;
     border-color: #3D36BF;
 }
@@ -46,15 +39,12 @@
     background-color: #f0f2f5;
 }
 
-/* Estilos para las tarjetas de usuario en la vista de incremento */
 .user-card.increment {
     flex-direction: row;
-    /* Asegurar que mantenga la fila */
     align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
     box-sizing: border-box;
-    /* Incluir padding en el ancho/alto */
 }
 
 .user-card.increment .user-info {
@@ -80,9 +70,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centrado horizontal */
     justify-content: center;
-    /* Centrado vertical si es necesario */
     text-align: center;
     min-width: 120px;
 }
@@ -98,7 +86,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    /* Espacio entre los detalles del usuario */
 }
 
 .user-card.increment .detail-item {
@@ -129,7 +116,6 @@
     background: linear-gradient(90deg, #3D36BF, #1D1959);
 }
 
-/* Media Queries para responsividad de incremento de usuarios */
 @media (max-width: 768px) {
     .user-card.increment {
         flex-direction: column;
@@ -140,14 +126,12 @@
     .user-card.increment .user-info {
         width: 100%;
         flex-direction: column;
-        /* Apilar avatar y nombre */
         align-items: flex-start;
         gap: 0.5rem;
     }
 
     .user-card.increment .user-details {
         width: 100%;
-        /* Detalles ocupan todo el ancho */
     }
 
     .user-card.increment .btn-apply-discount {

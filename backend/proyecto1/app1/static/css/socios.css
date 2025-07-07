@@ -1,13 +1,8 @@
-/* Contenedor principal para el scroll vertical localizado */
 .main-socio-container {
     flex: 1;
-    /* Ocupa el espacio restante en el main-content-admin */
     overflow-y: auto;
-    /* Permite el scroll vertical dentro de este contenedor */
     padding-bottom: 5rem;
-    /* Espacio para la barra flotante */
     padding-right: 8px;
-    /* Pequeño padding para evitar que la barra de scroll se pegue al borde */
 }
 
 .main-content-admin {
@@ -17,7 +12,6 @@
     overflow: hidden;
 }
 
-/* Estilos comunes del encabezado de sección (Socios) */
 .socio-header {
     display: flex;
     justify-content: space-between;
@@ -37,17 +31,14 @@
 .socio-header h2 .fas {
     margin-right: 0.8rem;
     color: #7B68EE;
-    /* Color de icono para Socios, similar a tus tarjetas */
 }
 
-/* Estilos para la barra flotante inferior de Socios */
 .bottom-floating-bar-socio {
     position: fixed;
     bottom: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     background-color: black;
-    /* Fondo oscuro */
     border-radius: 3rem;
     padding: 0.75rem 1.5rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -74,10 +65,8 @@
 .bottom-floating-bar-socio .bar-button.active {
     background-color: rgba(255, 255, 255, 0.2);
     color: #E0E7FF;
-    /* Un color ligeramente más claro al activar/hover */
 }
 
-/* --- Estilos para la lista de Socios (socios.html) --- */
 .socio-list-section {
     display: flex;
     flex-direction: column;
@@ -133,9 +122,8 @@ input:checked+.slider {
     gap: 1rem;
     font-size: 1rem;
     color: #3D36BF;
-  }  
+}
 
-/* Estilos para el switch (toggle) */
 .switch {
     position: relative;
     display: inline-block;
@@ -175,7 +163,6 @@ input:checked+.slider {
 
 input:checked+.slider {
     background-color: #7B68EE;
-    /* Color del switch cuando está activo */
 }
 
 input:focus+.slider {
@@ -188,7 +175,6 @@ input:checked+.slider:before {
     transform: translateX(20px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 20px;
 }
@@ -207,17 +193,15 @@ input:checked+.slider:before {
     font-weight: 500;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
-    min-width: 170px;   
+    min-width: 170px;
 }
 
 .socio-card .btn-view-info:hover {
     transform: scale(1.05);
 }
 
-/* Media queries para socios.html */
 @media (max-width: 768px) {
     .socio-list-section {
         grid-template-columns: 1fr;
-        /* Una columna en móviles */
     }
 }

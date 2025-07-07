@@ -5,9 +5,6 @@
     padding-right: 8px;
 }
 
-/* Estos dos estilos (.main-content-admin, .top-bar-admin) deberían estar en masteradmin.css si son globales,
-   pero los mantengo aquí asumiendo que dashboard.css es el único lugar donde los defines y que son necesarios para el layout del dashboard.
-   Si ya están en masteradmin.css, deberías eliminarlos de aquí para evitar duplicación. */
 .main-content-admin {
     display: flex;
     flex-direction: column;
@@ -19,10 +16,8 @@
 .top-bar-admin {
     flex-shrink: 0;
     height: 70px;
-    /* Ajusta si tu topbar tiene otro alto */
 }
 
-/* Estilos para las tarjetas de resumen */
 .dashboard-summary-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -32,7 +27,6 @@
 
 .summary-card {
     background-color: #7B68EE;
-    /* Morado claro para la primera tarjeta */
     color: white;
     padding: 1.5rem;
     border-radius: 0.75rem;
@@ -43,17 +37,14 @@
     justify-content: center;
     text-align: center;
     height: 150px;
-    /* Altura fija para uniformidad */
 }
 
 .summary-card.registered-users {
     background-color: #7B68EE;
-    /* Morado para Usuarios Registrados */
 }
 
 .summary-card.registered-partners {
     background-color: #8A2BE2;
-    /* Un morado ligeramente diferente para Socios Registrados */
 }
 
 
@@ -69,37 +60,35 @@
     font-weight: 500;
 }
 
-/* Estilos para las secciones de gráficos/listas */
 .dashboard-sections {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* Una columna más ancha para gráficos, otra para categorías */
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
 
-.chart-card { /* Se eliminó .list-card de este selector */
+.chart-card {
     background-color: white;
     padding: 1.5rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.chart-card .card-header { /* Se eliminó .list-card de este selector */
+.chart-card .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.chart-card .card-header h4 { /* Se eliminó .list-card de este selector */
+.chart-card .card-header h4 {
     font-size: 1.2rem;
     font-weight: 600;
     color: #343a40;
     margin-bottom: 0;
 }
 
-.chart-card .card-header .dropdown select { /* Se eliminó .list-card de este selector */
+.chart-card .card-header .dropdown select {
     border: 1px solid #dee2e6;
     border-radius: 0.3rem;
     padding: 0.3rem 0.7rem;
@@ -107,28 +96,20 @@
     color: #6c757d;
 }
 
-/* Estilos para los gráficos simulados (barras) */
 .bar-chart-container {
     display: flex;
     align-items: flex-end;
-    /* Alinear las barras en la base */
     gap: 0.5rem;
     height: 150px;
-    /* Altura del área del gráfico */
     padding-bottom: 1rem;
-    /* Espacio para etiquetas de abajo */
     border-bottom: 1px solid #eee;
-    /* Línea de base del gráfico */
     margin-bottom: 1.5rem;
 }
 
 .bar {
     width: 30px;
-    /* Ancho de cada barra */
     background-color: #3D36BF;
-    /* Color de las barras */
     border-radius: 0.25rem 0.25rem 0 0;
-    /* Bordes superiores redondeados */
     position: relative;
     display: flex;
     align-items: flex-end;
@@ -141,19 +122,15 @@
 .bar-label {
     position: absolute;
     bottom: -1.5rem;
-    /* Debajo de la barra */
     color: #6c757d;
     font-size: 0.8rem;
     text-align: center;
     width: 100%;
-    /* Para que la etiqueta se alinee con la barra */
 }
 
-/* Estilos para la sección de perfiles más usados */
 .most-used-profiles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    /* 4 columnas */
     gap: 1rem;
     margin-top: 1.5rem;
 }
@@ -184,9 +161,7 @@
 
 .profile-card .btn-info {
     background-color: #E0E7FF;
-    /* Fondo azul claro */
     color: #3D36BF;
-    /* Texto azul oscuro */
     border: none;
     padding: 0.4rem 0.8rem;
     border-radius: 0.3rem;
@@ -200,7 +175,6 @@
     background-color: #c9d8ff;
 }
 
-/* Estilos para las categorías más usadas (lado derecho) */
 .most-used-categories {
     padding: 1.5rem;
     background-color: white;
@@ -224,7 +198,6 @@
     height: 70px;
     border-radius: 50%;
     border: 5px solid;
-    /* El color se define por JS o CSS específico */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,12 +208,10 @@
 
 .most-used-categories .category-circle.salud {
     border-color: #007bff;
-    /* Azul para Salud */
 }
 
 .most-used-categories .category-circle.educacion {
     border-color: #28a745;
-    /* Verde para Educación */
 }
 
 .most-used-categories .category-name {
@@ -248,19 +219,16 @@
     color: #343a40;
 }
 
-/* Estilos para el gráfico de "Servicio más usado" (donut) */
 .service-usage-chart-card {
     display: flex;
     flex-direction: column;
     grid-column: span 2;
-    /* Ocupa las dos columnas en el layout principal */
 }
 
 .chart-and-legend {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* Espacio entre el gráfico y la leyenda */
     margin-top: 1rem;
 }
 
@@ -270,12 +238,8 @@
     position: relative;
     border-radius: 50%;
     background-image: conic-gradient(#3D36BF 0deg 50%,
-            /* Farmacia Cruzhamba */
             #FFC107 50deg 75%,
-            /* Farmacia Cruz Azul */
-            #E0E7FF 75deg 100%
-            /* Clínica San Jose */
-        );
+            #E0E7FF 75deg 100%);
 }
 
 .donut-chart-center {
@@ -285,7 +249,6 @@
     transform: translate(-50%, -50%);
     background-color: white;
     width: 100px;
-    /* Tamaño del agujero central */
     height: 100px;
     border-radius: 50%;
     display: flex;
@@ -334,16 +297,13 @@
 }
 
 
-/* Media queries para el dashboard */
 @media (max-width: 992px) {
     .dashboard-sections {
         grid-template-columns: 1fr;
-        /* Una sola columna en tablets */
     }
 
     .service-usage-chart-card {
         grid-column: span 1;
-        /* Volver a una columna */
     }
 
     .donut-chart-container {
@@ -360,12 +320,10 @@
 @media (max-width: 768px) {
     .dashboard-summary-cards {
         grid-template-columns: 1fr;
-        /* Una sola columna en móviles */
     }
 
     .bar-chart-container {
         height: 100px;
-        /* Reduce la altura del gráfico de barras */
     }
 
     .bar {
@@ -374,7 +332,6 @@
 
     .most-used-profiles {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        /* Ajuste para perfiles */
     }
 
     .most-used-categories .category-circle {

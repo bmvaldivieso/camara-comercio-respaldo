@@ -1,21 +1,20 @@
-/* Estilos para el sidebar del carrito */
 .cart-sidebar {
-    position: fixed; /* Para que esté siempre visible y se superponga */
+    position: fixed;
     top: 0;
-    right: -350px; /* Inicialmente oculto a la derecha */
-    width: 350px; /* Ancho del sidebar del carrito */
+    right: -350px;
+    width: 350px;
     height: 100%;
     background-color: white;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1); /* Sombra hacia la izquierda */
-    transition: right 0.3s ease-in-out; /* Transición suave para aparecer/desaparecer */
-    z-index: 1050; /* Para estar por encima del contenido principal */
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1050;
     display: flex;
     flex-direction: column;
     padding: 1.5rem;
 }
 
 .cart-sidebar.open {
-    right: 0; /* Muestra el sidebar del carrito */
+    right: 0;
 }
 
 .cart-sidebar .cart-header {
@@ -30,7 +29,7 @@
 .cart-sidebar .cart-header h3 {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #3D36BF; /* Color azul para el título del carrito */
+    color: #3D36BF;
     margin-bottom: 0;
 }
 
@@ -48,22 +47,21 @@
 }
 
 .cart-sidebar .cart-items {
-    flex-grow: 1; /* Para que la lista de ítems ocupe el espacio restante */
-    overflow-y: auto; /* Permite desplazamiento si hay muchos ítems */
-    padding-right: 10px; /* Espacio para la barra de desplazamiento */
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-/* Estilo para cada item en el carrito */
 .cart-item {
     display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px dashed #e9ecef; /* Línea de puntos */
+    border-bottom: 1px dashed #e9ecef;
 }
 
 .cart-item:last-child {
-    border-bottom: none; /* Eliminar borde del último item */
+    border-bottom: none;
 }
 
 .cart-item .item-image {
@@ -97,7 +95,7 @@
 }
 
 .cart-sidebar .btn-pay {
-    background-color: #3D36BF; /* Color azul para el botón de pagar */
+    background-color: #3D36BF;
     border-color: #3D36BF;
     color: white;
     font-weight: 600;
@@ -108,21 +106,20 @@
 }
 
 .cart-sidebar .btn-pay:hover {
-    background-color: #302a9b; /* Tono más oscuro al pasar el ratón */
+    background-color: #302a9b;
     border-color: #302a9b;
 }
 
-/* Overlay para oscurecer la pantalla */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Gris oscuro semitransparente */
-    z-index: 1040; /* Por debajo del carrito, pero por encima del contenido principal */
-    opacity: 0; /* Inicialmente transparente */
-    visibility: hidden; /* Oculto por defecto */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 

@@ -1,4 +1,3 @@
-/* Scroll horizontal para el contenedor principal */
 #cards-container.categories-scroll {
   display: flex;
   flex-wrap: nowrap;
@@ -9,7 +8,6 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* Tarjeta base */
 .category-card.card-salud {
   width: 360px;
   height: 400px;
@@ -27,12 +25,10 @@
   flex: 0 0 280px;
 }
 
-/* Hover con degradado */
 .category-card.card-salud:hover {
   background: linear-gradient(180deg, #857FF1E0 0%, #A0F6FF 100%);
 }
 
-/* ÍCONO – cambia de azul a amarillo */
 .category-card.card-salud .card-title i {
   color: #003f87;
   transition: color 0.3s ease;
@@ -42,14 +38,12 @@
   color: #ffc107;
 }
 
-/* Título */
 .category-card.card-salud .card-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
-/* Descripción */
 .category-card.card-salud .card-description {
   font-size: 0.95rem;
   color: #555;
@@ -61,7 +55,6 @@
   color: white;
 }
 
-/* Botón: degradado dorado */
 .category-card.card-salud .btn-ingresar {
   background: linear-gradient(to right, #B58314, #F0DC5F);
   color: white;
@@ -73,14 +66,12 @@
   transition: all 0.3s ease;
 }
 
-/* Botón cambia a blanco al hacer hover en la tarjeta */
 .category-card.card-salud:hover .btn-ingresar {
   background-color: white;
   background-image: none;
   color: #343a40;
 }
 
-/* Botón "Volver" */
 .btn-volver {
   background-color: #3D36BF;
   color: white;
@@ -95,7 +86,6 @@
   background-color: #3D36BF;
 }
 
-/* Banner */
 .banner-servicios img {
   width: 100%;
   max-height: 280px;
@@ -103,4 +93,3 @@
   display: block;
   border-bottom: 4px solid white;
 }
-

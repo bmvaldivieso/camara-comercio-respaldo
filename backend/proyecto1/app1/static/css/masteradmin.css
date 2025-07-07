@@ -1,21 +1,20 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f8f9fa; /* Fondo gris muy claro para el admin */
+    background-color: #f8f9fa;
     display: flex;
     min-height: 100vh;
     margin: 0;
-    overflow-x: hidden; /* Evita scroll horizontal no deseado */
+    overflow-x: hidden;
 }
 
-/* Estilos para la barra lateral izquierda (similar al anterior, pero con nuevos elementos) */
 .sidebar-admin {
-    width: 280px; /* Ancho fijo para el sidebar del admin */
-    background-color: #3D36BF; /* Fondo azul oscuro */
+    width: 280px;
+    background-color: #3D36BF;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     padding: 1.5rem 0;
-    position: relative; /* Para el posicionamiento del botón de login */
+    position: relative;
 }
 
 .sidebar-admin .logo-section {
@@ -25,7 +24,7 @@ body {
 }
 
 .sidebar-admin .logo-section img {
-    height: 100px; /* Un poco más pequeño que en el frontend */
+    height: 100px;
     margin-bottom: 0.5rem;
 }
 
@@ -33,7 +32,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     color: white;
-    margin-top: -0.5rem; /* Ajuste para acercar al logo */
+    margin-top: -0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -41,7 +40,7 @@ body {
 .sidebar-admin .profile-section {
     text-align: center;
     padding: 0.5rem;
-    margin-bottom: 1rem; /* Más espacio */
+    margin-bottom: 1rem;
 }
 
 .sidebar-admin .profile-section .profile-pic {
@@ -49,7 +48,7 @@ body {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid white; /* Borde amarillo alrededor de la foto */
+    border: 3px solid white;
     margin-bottom: 0.5rem;
 }
 
@@ -65,7 +64,7 @@ body {
 .sidebar-admin .nav-links .nav-item {
     display: flex;
     align-items: center;
-    padding: 0.8rem 2.5rem; /* Más padding para los textos */
+    padding: 0.8rem 2.5rem;
     color: white;
     text-decoration: none;
     transition: background-color 0.2s ease, color 0.2s ease;
@@ -73,38 +72,37 @@ body {
 
 .sidebar-admin .nav-links .nav-item:hover,
 .sidebar-admin .nav-links .nav-item.active {
-    background-color: white; /* Fondo blanco al pasar el ratón o activo */
-    color: #3D36BF !important; /* Texto azul oscuro */
-    border-left: none; /* Sin borde */
-    padding-left: 2.5rem; /* Mantener padding */
+    background-color: white;
+    color: #3D36BF !important;
+    border-left: none;
+    padding-left: 2.5rem;
 }
 
 .sidebar-admin .nav-links .nav-item i {
-    color: white; /* Color inicial del icono */
+    color: white;
     margin-right: 1rem;
     font-size: 1.2rem;
-    transition: color 0.2s ease; /* Transición para el color del icono */
+    transition: color 0.2s ease;
 }
 
 .sidebar-admin .nav-links .nav-item.active i {
-    color: #3D36BF; /* Icono azul oscuro cuando activo */
+    color: #3D36BF;
 }
 
-/* Estilo del botón de "Login" en la barra lateral (ajustado para el pie) */
 .sidebar-admin .login-button-container {
     padding: 1.5rem 2.5rem;
     text-align: center;
-    margin-top: auto; /* Empuja el botón al final */
+    margin-top: auto;
 }
 
 .sidebar-admin .login-button-container .btn-login {
-    background-color: #3D36BF; /* Color azul */
-    border-color: white; /* Borde blanco */
+    background-color: #3D36BF;
+    border-color: white;
     color: white;
     font-weight: 600;
     border: 2px solid white;
     padding: 0.75rem 1.5rem;
-    border-radius: 0.5rem; /* Botón más rectangular */
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -127,11 +125,10 @@ body {
     color: #3D36BF;
 }
 
-/* Estilos para el contenido principal derecho */
 .main-content-admin {
-    flex-grow: 1; /* Ocupa el espacio restante */
+    flex-grow: 1;
     padding: 2rem;
-    background-color: #f8f9fa; /* Fondo gris claro */
+    background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
 }
@@ -154,11 +151,11 @@ body {
     display: flex;
     align-items: center;
     background-color: white;
-    border: 1px solid #dee2e6; /* Borde suave */
-    border-radius: 3rem; /* Bordes ligeramente redondeados */
+    border: 1px solid #dee2e6;
+    border-radius: 3rem;
     padding: 0.5rem 1rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    width: 400px; /* Ancho fijo para la barra de búsqueda */
+    width: 400px;
 }
 
 .main-content-admin .top-bar-admin .search-box-admin input {
@@ -175,14 +172,14 @@ body {
 
 .main-content-admin .top-bar-admin .search-icon-right {
     background-color: #000000;
-    border-radius: 3rem; /* Ligeramente redondeado */
+    border-radius: 3rem;
     width: 45px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    margin-left: 0.5rem; /* Espacio entre input y botón */
+    margin-left: 0.5rem;
 }
 
 .main-content-admin .top-bar-admin .search-icon-right i {
@@ -208,15 +205,14 @@ body {
 .topbar-right-group {
     display: flex;
     align-items: center;
-    gap: 1.5rem; /* Este separa buscador y campana sin depender del margin */
+    gap: 1.5rem;
 }
 
 .main-content-admin .top-bar-admin .notification-icon i {
     font-size: 2rem;
-    color: black; /* Icono gris */
+    color: black;
 }
 
-/* Media queries para responsividad (admin) */
 @media (max-width: 992px) {
     body {
         flex-direction: column;
@@ -279,11 +275,11 @@ body {
 
 @media (max-width: 768px) {
     .main-content-admin .top-bar-admin .search-box-admin {
-        flex-direction: row; /* Asegurar que la búsqueda se mantenga en línea */
+        flex-direction: row;
         width: 100%;
     }
+
     .main-content-admin .top-bar-admin .search-icon-right {
-        margin-left: 0.5rem; /* Mantener espacio */
+        margin-left: 0.5rem;
     }
 }
-

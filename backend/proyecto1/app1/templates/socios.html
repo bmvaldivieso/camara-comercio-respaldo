@@ -4,13 +4,13 @@
 {% block title %}Socios - Admin{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/socios.css' %}" /> {# Estilos generales de socios #}
+<link rel="stylesheet" href="{% static 'css/socios.css' %}" />
 {% endblock %}
 
 {% block admin_content %}
 <hr>
 
-<div class="main-socio-container"> {# Contenedor para el scroll vertical #}
+<div class="main-socio-container">
 
   <div class="socio-list-section">
     <div class="socio-card">
@@ -66,13 +66,12 @@
       <div class="socio-status">
         <span>Habilitado</span>
         <label class="switch">
-          <input type="checkbox"> {# Este podría estar deshabilitado para el ejemplo #}
+          <input type="checkbox">
           <span class="slider round"></span>
         </label>
       </div>
       <button class="btn-view-info">Ver Info</button>
     </div>
-    {# Puedes repetir socio-card para ver el scroll #}
     <div class="socio-card">
       <div class="socio-info">
         <img src="{% static 'images/imagen2.png' %}" alt="Carla Sofia" class="socio-avatar">
@@ -131,7 +130,6 @@
     </div>
   </div>
 </div>
-{% comment %} La barra flotante va dentro del block admin_content, como se aprendió con usuarios.html {% endcomment %}
 {% include 'bottom_socio_nav.html' %}
 {% endblock %}
 

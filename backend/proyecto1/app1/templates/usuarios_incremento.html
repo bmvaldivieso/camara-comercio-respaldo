@@ -4,8 +4,8 @@
 {% block title %}Usuarios - Incremento de Compras - Admin{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/usuarios.css' %}" /> {# Reutiliza estilos base de usuarios #}
-<link rel="stylesheet" href="{% static 'css/usuarios_incremento.css' %}" /> {# Estilos específicos de incremento #}
+<link rel="stylesheet" href="{% static 'css/usuarios.css' %}" />
+<link rel="stylesheet" href="{% static 'css/usuarios_incremento.css' %}" />
 {% endblock %}
 
 {% block admin_content %}
@@ -13,7 +13,7 @@
   <h4>Incremento de compras por usuarios</h4>
   <hr>
   <div class="filters-section">
-    <span style="color: #343a40; font-weight: 500;">Aplicar filtro:</span> {# Título del filtro #}
+    <span style="color: #343a40; font-weight: 500;">Aplicar filtro:</span>
     <button class="filter-button" id="filter-mas-compras">Mas Compras</button>
     <button class="filter-button" id="filter-mas-gasto">Mas gasto</button>
     <button class="filter-button" id="filter-ultima-compra">Ultima Compra</button>
@@ -207,9 +207,8 @@
 
 {% include 'bottom_user_nav.html' %}
 
-{# La barra flotante se incluye en el masteradmin.html o se renderiza por el JS si no está en el master. #}
 {% endblock %}
 
 {% block extra_js %}
-<script src="{% static 'js/usuarios_logic.js' %}" defer></script> {# Script unificado de usuarios #}
+<script src="{% static 'js/usuarios_logic.js' %}" defer></script>
 {% endblock %}
